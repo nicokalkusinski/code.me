@@ -36,12 +36,14 @@
         #outputCode {
             width: 99%;
             border: 1px solid black;
+            margin-top: 1%;
             padding: 1%;
         }
 
         #outputDecode {
             width: 99%;
             border: 1px solid black;
+            margin-top: 1%;
             padding: 1%;
         }
 
@@ -55,15 +57,15 @@
 <body>
     <div class="side">
         <h3>Encode the message</h3>
-        <textarea id="inputCode" cols="50" rows="10" placeholder="key:message to encode... &#10;eg. 301:elephants are green"></textarea>
-        <div class="outputText">Output: <br></div>
+        <textarea id="inputCode" cols="50" rows="10" placeholder="key:message to encode... &#10;eg. 301:Elephants are green"></textarea>
+        <div class="outputText">Output: <button id="copyEncoded">Copy</button></div>
         <div id="outputCode">Key:message...</div>
         <script src="scripts/encode.js"></script>
     </div>
     <div class="side">
         <h3>Decode the message</h3>
-        <textarea id="inputDecode" cols="50" rows="10" placeholder="key:message to decode... &#10;eg. 301:szs3wn165-n4s-u4ss1"></textarea>
-        <div class="outputText">Output: <br></div>
+        <textarea id="inputDecode" cols="50" rows="10" placeholder="key:message to decode... &#10;eg. 301:W2w6yr498Pr7wPx7ww4"></textarea>
+        <div class="outputText">Output: <button id="copyDecoded">Copy</button><br></div>
         <div id="outputDecode">Decoded message...</div>
         <script src="scripts/decode.js"></script>
     </div>
@@ -71,13 +73,14 @@
         <h3>How to use?</h3>
         <h4>Encoding</h4>
         <span>Write your message in the "Encoding" section.<br>The whole input should look like this example:</span>
-        <p>301:elephants are green</p>
+        <p>301:Elephants are green</p>
         <span>Copy the encoded message from the "output" box.</span>
         <h4>Decoding</h4>
         <span>Paste the message in the "Decoding" section. <br> The message you are trying to decode should look like this:</span>
-        <p>301:szs3wn165-n4s-u4ss1</p>
+        <p>301:W2w6yr498Pr7wPx7ww4</p>
         <span>If the key match the message, decoded message will appear in the "output" box.</span>
     </div>
-    <div class="bottom">Created by raitrow. <br>version 1.0 <br> Last update 20.01.2021</div>
+    <div class="bottom">Created by raitrow. <br>version 1.1 <br> Last update 20.01.2021</div>
+    <script src="scripts/copy.js"></script>
 </body>
 </html>

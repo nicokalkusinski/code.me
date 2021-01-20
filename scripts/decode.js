@@ -21,7 +21,16 @@ let decode = (input) => {
                 //   20   21   22   23   24   25
                     'w', 'v', 'x', 'y', 'z', 'q',
                 //   26   27   28   29   30   31   32   33   34   35
-                    '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
+                    '1', '2', '3', '4', '5', '6', '7', '8', '9', '0',
+                //   36   37   38   39   40   41   42   43   44   45
+                    '!', '@', '#', '$', '%', '^', '&', '*', '(', ')',
+                //   46   47   48   49   50   51   52   53   54   55
+                    '`', '~', '-', '=', '+', '[', ']', '{', '}', '\\',
+                //   56   57    58    59   60   61   62   63   64   65   66   67   68
+                    '|', '\"', '\'', '<', '>', '/', ',', '.', '?', ';', ':', '_', ' ',
+                    'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
+                    'K', 'L', 'M', 'N', 'O', 'P', 'R', 'S', 'T', 'U',
+                    'W', 'V', 'X', 'Y', 'Z', 'Q'];
 
     for(let i = 0; i < chars.length; i++){
         switch(chars[i]){
@@ -63,9 +72,68 @@ let decode = (input) => {
             case '9': decrypted_text += letters[dchck(34, key)]; break;
             case '0': decrypted_text += letters[dchck(35, key)]; break;
 
-            case '-': decrypted_text += ' '; break;
-            case '^': decrypted_text += '.'; break;
-            case '\"': decrypted_text += ','; break;
+            case '!': decrypted_text += letters[dchck(36, key)]; break;
+            case '@': decrypted_text += letters[dchck(37, key)]; break;
+            case '#': decrypted_text += letters[dchck(38, key)]; break;
+            case '$': decrypted_text += letters[dchck(39, key)]; break;
+            case '%': decrypted_text += letters[dchck(40, key)]; break;
+            case '^': decrypted_text += letters[dchck(41, key)]; break;
+            case '&': decrypted_text += letters[dchck(42, key)]; break;
+            case '*': decrypted_text += letters[dchck(43, key)]; break;
+            case '(': decrypted_text += letters[dchck(44, key)]; break;
+            case ')': decrypted_text += letters[dchck(45, key)]; break;
+
+            case '`': decrypted_text += letters[dchck(46, key)]; break;
+            case '~': decrypted_text += letters[dchck(47, key)]; break;
+            case '-': decrypted_text += letters[dchck(48, key)]; break;
+            case '=': decrypted_text += letters[dchck(49, key)]; break;
+            case '+': decrypted_text += letters[dchck(50, key)]; break;
+            case '[': decrypted_text += letters[dchck(51, key)]; break;
+            case ']': decrypted_text += letters[dchck(52, key)]; break;
+            case '{': decrypted_text += letters[dchck(53, key)]; break;
+            case '}': decrypted_text += letters[dchck(54, key)]; break;
+            case '\\': decrypted_text += letters[dchck(55, key)]; break;
+
+            case '|': decrypted_text += letters[dchck(56, key)]; break;
+            case '\"': decrypted_text += letters[dchck(57, key)]; break;
+            case '\'': decrypted_text += letters[dchck(58, key)]; break;
+            case '<': decrypted_text += letters[dchck(59, key)]; break;
+            case '>': decrypted_text += letters[dchck(60, key)]; break;
+            case '/': decrypted_text += letters[dchck(61, key)]; break;
+            case ',': decrypted_text += letters[dchck(62, key)]; break;
+            case '.': decrypted_text += letters[dchck(63, key)]; break;
+            case '?': decrypted_text += letters[dchck(64, key)]; break;
+            case ';': decrypted_text += letters[dchck(65, key)]; break;
+            case ':': decrypted_text += letters[dchck(66, key)]; break;
+            case '_': decrypted_text += letters[dchck(67, key)]; break;
+            case ' ': decrypted_text += letters[dchck(68, key)]; break;
+
+            case 'A': decrypted_text += letters[dchck(69, key)]; break;
+            case 'B': decrypted_text += letters[dchck(70, key)]; break;
+            case 'C': decrypted_text += letters[dchck(71, key)]; break;
+            case 'D': decrypted_text += letters[dchck(72, key)]; break;
+            case 'E': decrypted_text += letters[dchck(73, key)]; break;
+            case 'F': decrypted_text += letters[dchck(74, key)]; break;
+            case 'G': decrypted_text += letters[dchck(75, key)]; break;
+            case 'H': decrypted_text += letters[dchck(76, key)]; break;
+            case 'I': decrypted_text += letters[dchck(77, key)]; break;
+            case 'J': decrypted_text += letters[dchck(78, key)]; break;
+            case 'K': decrypted_text += letters[dchck(79, key)]; break;
+            case 'L': decrypted_text += letters[dchck(80, key)]; break;
+            case 'M': decrypted_text += letters[dchck(81, key)]; break;
+            case 'N': decrypted_text += letters[dchck(82, key)]; break;
+            case 'O': decrypted_text += letters[dchck(83, key)]; break;
+            case 'P': decrypted_text += letters[dchck(84, key)]; break;
+            case 'R': decrypted_text += letters[dchck(85, key)]; break;
+            case 'S': decrypted_text += letters[dchck(86, key)]; break;
+            case 'T': decrypted_text += letters[dchck(87, key)]; break;
+            case 'U': decrypted_text += letters[dchck(88, key)]; break;
+            case 'W': decrypted_text += letters[dchck(89, key)]; break;
+            case 'V': decrypted_text += letters[dchck(90, key)]; break;
+            case 'X': decrypted_text += letters[dchck(91, key)]; break;
+            case 'Y': decrypted_text += letters[dchck(92, key)]; break;
+            case 'Z': decrypted_text += letters[dchck(93, key)]; break;
+            case 'Q': decrypted_text += letters[dchck(94, key)]; break;
         }
     }
 
@@ -82,7 +150,7 @@ let decode = (input) => {
 let dchck = (index, key) => {
     let k = index;
     for(let i = key; i > 0; i--){
-        if(k == 0) k = 36;
+        if(k == 0) k = 95;
         k--;
     }
     return k;
